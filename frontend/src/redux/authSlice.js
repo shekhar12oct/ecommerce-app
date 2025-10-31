@@ -6,7 +6,7 @@ export const registerUser = createAsyncThunk(
   'auth/registerUser',
   async ({ name, email, password }, { rejectWithValue }) => {
     try {
-      const res = await axios.post('http://localhost:5000/api/users/register', {
+      const res = await axios.post('https://ecommerce-app-w2ql.onrender.com/api/users/register', {
         name,
         email,
         password,
@@ -26,7 +26,7 @@ export const loginUser = createAsyncThunk(
   'auth/loginUser',
   async ({ email, password }, { rejectWithValue }) => {
     try {
-      const res = await axios.post('http://localhost:5000/api/users/login', {
+      const res = await axios.post('https://ecommerce-app-w2ql.onrender.com/api/users/login', {
         email,
         password,
       });
